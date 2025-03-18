@@ -1,0 +1,160 @@
+EN - US
+# 🚀 Single-Cycle MIPS Processor in Verilog
+
+> Project developed to implement a single-cycle MIPS processor using Verilog, for the Computer Architecture and Organization discipline in the Computer Engineering course.
+
+## 📌 About the Project
+This project consists of implementing a single-cycle MIPS processor, where each instruction is executed in a single clock cycle. It is capable of performing addition, subtraction, AND, OR, SLT (set less than) and branch operations.
+The processor was developed in Verilog, using the Quartus II IDE, and tested with ModelSim. In addition, all functionalities were validated on an FPGA board.
+
+## 🔧 Technical Specifications
+- **Architecture:** Single-cycle MIPS
+- **Word Size:** 32 bits (except for the 5-bit PC)
+- **Memory:** Initialized with **32 positions** to facilitate simulation
+- **Development:** Verilog (Quartus II)
+- **Simulation:** ModelSim
+- **Physical Implementation:** FPGA
+
+## 🛠 Technologies Used
+- **Verilog HDL**
+- **Intel Quartus II** (development IDE)
+- **ModelSim** (simulation)
+- **FPGA** (hardware testing)
+
+## 🚀 How to Run the Project
+
+### 📥 Cloning the Repository
+```bash
+git clone https://github.com/mariana-nascimento-dev/MIPS_processor.git
+cd processor
+```
+                          
+### 🏗 Opening in Quartus II
+1. Open **Quartus II**.
+2. Load the `.qpf` project into the repository folder.
+3. Compile the code and check for errors.
+
+### ▶️ Simulating in ModelSim
+1. Open **ModelSim**.
+2. Compile the `.v` files of the project.
+3. Run the simulation and observe the signals in the **waveform**.
+
+### 🔧 Implementation in the FPGA
+1. Generate the bitstream in Quartus II.
+2. Upload it to the **FPGA board**.
+3. Test the processors functionalities with programs in memory.
+
+## 📝 Project Structure
+```
+📂 mips-unicycle/
+├── 📄 juiz.v # Top level and pinout block
+├── 📄 adevogada.v # Main block that calls the other blocks
+├── 📄 countPC.v # Instantiates the PC (program counter)
+├── 📄 memoriainstrucoes.v # Instantiates the instruction memory
+├── 📄 bancoInstrucoes.v # Control Unit
+├── 📄 MuxBanco.v # Mux to select register
+├── 📄 banco.v # Register bank
+├── 📄 rex.v # Signal extender
+├── 📄 mari8.v # Mux between read2 and extender output
+├── 📄 ULAControl.v # ULA control
+├── 📄 ULA32.v # Arithmetic logic unit
+├── 📄 elefantedois.v # Data memory
+├── 📄 Muxelefante.v # Mux between the data memory output and the ALU output
+├── 📄 somador5bits.v # Pass to the next PC
+├── 📄 ShiftTwoBeq.v # Bit shifter for the BEQ (conditional branch)
+├── 📄 ULACima.v # ALU for the branch instruction
+├── 📄 Muxbeq.v # Mux for the BEQ (conditional branch)
+├── 📄 ShiftTwoJump.v # Bit shifter for the JUMP (unconditional branch)
+├── 📄 MuxJump.v # Mux for the JUMP (unconditional branch) unconditional)
+├── 📄 juiz.qpf # Quartus II Archive
+└── 📄 README.md # Project Documentation
+```
+
+## 📬 Contact
+📧 Email: [mmatias0310@gmail.com](mailto\:mmatias0310@gmail.com)\ 
+🔗 LinkedIn: [Mariana Nascimento](https://www.linkedin.com/in/mariana-matias-nascimento/)
+
+.
+.
+.
+.
+.
+.
+                          
+PT - BR
+
+# 🚀 Processador MIPS Monociclo em Verilog
+
+> Projeto desenvolvido para implementação de um processador MIPS monociclo utilizando Verilog, para a discplina de Arquitetura e Organização de Computadores no curso de Engenharia de Computação.
+
+## 📌 Sobre o Projeto
+Este projeto consiste na implementação de um processador MIPS monociclo, onde cada instrução é executada em um único ciclo de clock. Ele é capaz de fazer operações de soma, subtração, AND, OR, SLT (set less than) e desvio. 
+O processador foi desenvolvido em Verilog, utilizando a IDE Quartus II, e testado com o ModelSim. Além disso, todas as funcionalidades foram validadas em uma placa FPGA.
+
+## 🔧 Especificações Técnicas
+- **Arquitetura:** MIPS Monociclo
+- **Tamanho da Palavra:** 32 bits (com exceção do PC de 5 bits)
+- **Memória:** Inicializada com **32 posições** para facilitar a simulação
+- **Desenvolvimento:** Verilog (Quartus II)
+- **Simulação:** ModelSim
+- **Implementação Física:** FPGA
+
+## 🛠 Tecnologias Utilizadas
+- **Verilog HDL**
+- **Intel Quartus II** (IDE de desenvolvimento)
+- **ModelSim** (simulação)
+- **FPGA** (teste em hardware)
+
+## 🚀 Como Rodar o Projeto
+
+### 📥 Clonando o Repositório
+```bash
+git clone https://github.com/mariana-nascimento-dev/MIPS_processor.git
+cd processador
+```
+
+### 🏗 Abrindo no Quartus II
+1. Abra o **Quartus II**.
+2. Carregue o projeto `.qpf` dentro da pasta do repositório.
+3. Compile o código e verifique se há erros.
+
+### ▶️ Simulando no ModelSim
+1. Abra o **ModelSim**.
+2. Compile os arquivos `.v` do projeto.
+3. Execute a simulação e observe os sinais no **waveform**.
+
+### 🔧 Implementação na FPGA
+1. Gere o bitstream no Quartus II.
+2. Faça o upload para a **placa FPGA**.
+3. Teste as funcionalidades do processador com programas na memória.
+
+## 📝 Estrutura do Projeto
+```
+📂 mips-monociclo/
+├── 📄 juiz.v                # Top level e bloco de pinagem
+├── 📄 adevogada.v           # Bloco principal que chama os outros blocos
+├── 📄 countPC.v             # Instancia o PC (program counter)
+├── 📄 memoriainstrucoes.v   # Instancia a memoria de instrucoes
+├── 📄 bancoInstrucoes.v     # Unidade de Controle
+├── 📄 MuxBanco.v            # Mux para selecionar registrador
+├── 📄 banco.v               # Banco de registradores
+├── 📄 rex.v                 # Extensor de sinal
+├── 📄 mari8.v               # Mux entre read2 e saída do extensor
+├── 📄 ULAControl.v          # Controle da ULA
+├── 📄 ULA32.v               # Unidade logica e aritmetica
+├── 📄 elefantedois.v        # Memória de dados
+├── 📄 Muxelefante.v         # Mux entre a saida da memoria de dados e a saida da ULA
+├── 📄 somador5bits.v        # Passa para o prox PC
+├── 📄 ShiftTwoBeq.v         # Deslocador de bits para o BEQ (desvio condicional)
+├── 📄 ULACima.v             # ULA pra instrucao de desvio
+├── 📄 Muxbeq.v              # Mux para o BEQ (desvio condicional)
+├── 📄 ShiftTwoJump.v        # Deslocador de bits para o JUMP (desvio incondicional)
+├── 📄 MuxJump.v             # Mux para o JUMP (desvio incondicional)
+├── 📄 juiz.qpf              # Arquivo do Quartus II
+└── 📄 README.md             # Documentação do projeto
+```
+
+
+## 📬 Contato
+📧 Email: [mmatias0310@gmail.com](mailto\:mmatias0310@gmail.com)\  
+🔗 LinkedIn: [Mariana Nascimento](https://www.linkedin.com/in/mariana-matias-nascimento/)
